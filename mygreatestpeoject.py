@@ -10,7 +10,10 @@ wid,hei=width/2,height/2
 screen =pygame.display.set_mode((width,height))
 run = True
 color = "grey"
-
+wantdotsonright = True
+wantdotsonleft = True
+wantlinseonright = True
+wantlinseonleft = True
 linewidth = 1
 radius = 10
 x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21 = wid,wid,wid,wid,wid,wid,wid,wid,wid,wid,wid,wid,wid,wid,wid,wid,wid,wid,wid,wid,wid
@@ -157,7 +160,7 @@ while run:
     #---x---x---x---x---x--x---x
     
     #circles for left hand
-    if False:
+    if wantdotsonleft:
         pygame.draw.circle(screen,color,(x1,y1),radius)
         pygame.draw.circle(screen,color,(x2,y2),radius)
         pygame.draw.circle(screen,color,(x3,y3),radius)
@@ -182,7 +185,7 @@ while run:
     
 
     #circles for right hand
-    if True:
+    if wantdotsonright:
         pygame.draw.circle(screen,color,(X1,Y1),radius)
         pygame.draw.circle(screen,color,(X2,Y2),radius)
         pygame.draw.circle(screen,color,(X3,Y3),radius)
@@ -206,7 +209,7 @@ while run:
         pygame.draw.circle(screen,color,(X21,Y21),radius)
     #--x---x--x--x---x--x--x--x--x--x---x--x--x--x--x--
     #drawing line for left hand 
-    if True:
+    if wantlinseonleft:
         pygame.draw.line(screen,color,(x1,y1),(x2,y2),linewidth)
         pygame.draw.line(screen,color,(x1,y1),(x6,y6),linewidth)
         pygame.draw.line(screen,color,(x1,y1),(x10,y10),linewidth)
@@ -232,7 +235,7 @@ while run:
         pygame.draw.line(screen,color,(x14,y14),(x18,y18),linewidth)
     
     #drawing line for right hand 
-    if True:
+    if wantlinseonright:
         pygame.draw.line(screen,color,(X1,Y1),(X2,Y2),linewidth)
         pygame.draw.line(screen,color,(X1,Y1),(X6,Y6),linewidth)
         pygame.draw.line(screen,color,(X1,Y1),(X10,Y10),linewidth)
