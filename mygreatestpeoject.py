@@ -1,3 +1,7 @@
+# pip install pygame
+# pip install cvzone
+# pip install mediapipe
+# pip install opencv-python
 import pygame
 import cvzone
 import cv2
